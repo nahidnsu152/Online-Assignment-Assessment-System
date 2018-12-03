@@ -1,0 +1,15 @@
+https://codewithawa.com/posts/image-upload-using-php-and-mysql-database
+
+
+
+  	$image = $_FILES['image']['name'];
+  
+
+  	// image file directory
+  	$target = "images/".basename($image);
+
+  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+  		$msg = "Image uploaded successfully";
+  	}else{
+  		$msg = "Failed to upload image";
+  	}
